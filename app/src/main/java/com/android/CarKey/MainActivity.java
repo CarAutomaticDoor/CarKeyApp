@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity
     private String mConnectedDeviceName = null;
     static boolean isConnectionError = false;
     private static final String TAG = "BluetoothClient";
-    private static String lockstate = "LOCK";
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -56,23 +55,10 @@ public class MainActivity extends AppCompatActivity
         ImageButton open = findViewById(R.id.open_btn);
         ImageButton close = findViewById(R.id.close_btn);
 
-        if(lockstate.equals("LOCK")) {
-            lock.setBackgroundResource(R.drawable.lock);
-        }
-        else {
-            lock.setBackgroundResource(R.drawable.unlock);
-        }
-
         lock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (lockstate.equals("LOCK")) {
-                    lockstate = "LOCK";
-                    sendMessage("00UUFF");
-                } else {
-                    lockstate = "UNLOCK";
-                    sendMessage("00LLFF");
-                }
+                sendMessage("00OOFF");
             }
         });
 
