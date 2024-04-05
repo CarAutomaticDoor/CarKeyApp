@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/set_small"
+        android:title="작은스위치">
+    </item>
+    <item
+        android:id="@+id/set_midium"
+        android:title="중간스위치">
+    </item>
+    <item
+        android:id="@+id/set_big"
+        android:title="큰스위치">
+    </item>
+</menu>
