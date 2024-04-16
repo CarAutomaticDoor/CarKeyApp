@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity
         lock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendMessage("00OOFF");
+                sendMessage("00LLFF");
             }
         });
 
